@@ -1,4 +1,4 @@
-package techproed.tests.day23_DependsOnMethods_270423;
+package techproed.tests.day23_DependsOnMethodsSoftAssertion_270423;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
@@ -9,9 +9,10 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class C02_DependsOnMethodsPriority {
+public class C01_DependsOnMethods {
     /*
-    Bu classi DependsOnMEthod ve Priorirty arasindaki farki göstermek icin actik.
+    Test methodlari birbirinden bagimsiz calisir. Methodlari birbirine bagimli calistirmak istersek
+    DependsOnMEthod parametresini @Test notasyonundan sonra baglamak istedigimiz test methodunan adini belirtiriz.
      */
     WebDriver driver;
 
@@ -24,13 +25,13 @@ public class C02_DependsOnMethodsPriority {
 
     }
 
-    @Test (priority = 1)
+    @Test (dependsOnMethods = "amazonTest")
     public void amazonTest2() {
         driver.get("https://www.amazon.com"); //Eger DependdsOnMethdos kullanmazsak  bu örnek icin NullPointerException hatasi aliriz.
 
     }
 
-    @Test (priority = 2)
+    @Test (dependsOnMethods = "amazonTest2")
     public void amazontest3() {
         driver.findElement(By.id("twotabsearchtextbox")).sendKeys("iphone", Keys.ENTER);
     }
