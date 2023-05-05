@@ -9,7 +9,7 @@ import techproed.utilities.Driver;
 import techproed.utilities.ReusableMethods;
 
 public class NegativeTest {
-    @Test
+    @Test(groups = "smoke")
     public void test1() {
         /*
         Description:

@@ -9,7 +9,7 @@ import techproed.utilities.Driver;
 
 public class PozitiveTest {
 
-    @Test
+    @Test(groups = "smoke")
     public void test1() {
         /*
         Acceptance Criteria:
