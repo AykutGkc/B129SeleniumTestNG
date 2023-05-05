@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="methods" thread-count="2">
+    <test name="/Users/aykutgkc/IdeaProjects/B129SeleniumTestNG/src/test/java/techproed/tests/day24_PropertiesPages_290423/C02_PageKullanimi.java">
+        <classes>
+            <class name="techproed.tests.day24_PropertiesPages_290423.C02_PageKullanimi"/>
+            <class name="techproed.tests.day23_DependsOnMethodsSoftAssertion_270423.C03_SoftAssertion"/>
+               
+            
+        </classes>
+    </test>
+</suite>

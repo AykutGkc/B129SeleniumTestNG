@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="classes" thread-count="2">
+    <test name="Day 23 Paralel Test">
+        <!-- .xml file ile paralel test yapmak icin öncelikle projemizi buna göre dizayn etmeliyiz.
+         Calisan testler birbirinden bagimsiz olmalidir.
+         Bagimli olan testler paralel calistirmada hata verebilirler.
+         PAralel test yapabilmek icin öncelikle <suite> tagina paralel parameteresi yazariz.
+         Sonrasinda paralel parametresine class,method,tests gibi atamalar ile hangi seviyede test
+         yapacagini belirleriz
+         classes-> her bir islem icin bir class ile run eder.Calistigi classta islem bitince siradaki classa gecer.
+         method-> her bir islem icin bir method ile run eder.
+         tests-> her bir  islem icin bir test ile run eder.
+         .xml file paralel testin amaci testlerimiz daha kisa sürede bitrebilmektir. Bunu da fazladan browser acarak
+         gerceklestirir. -->
+
+        <classes>
+            <class name="techproed.tests.day23_DependsOnMethodsSoftAssertion_270423.C01_DependsOnMethods">
+                <methods>
+                    <include name="amazonTest"/>
+                    <include name="amazonTest2"/>
+                    <include name="amazontest3"/>
+                </methods>
+            </class>
+            <class name="techproed.tests.day23_DependsOnMethodsSoftAssertion_270423.C02_DependsOnMethodsPriority">
+                <methods>
+                    <include name="amazonTest"/>
+                    <include name="amazonTest2"/>
+                    <include name="amazontest3"/>
+                </methods>
+            </class>
+            <class name="techproed.tests.day23_DependsOnMethodsSoftAssertion_270423.C03_SoftAssertion">
+                <methods>
+                    <include name="amazonTest"/>
+                </methods>
+            </class>
+            <class name="techproed.tests.day23_DependsOnMethodsSoftAssertion_270423.C04_DriverTest">
+                <methods>
+                    <include name="driverTest1"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
