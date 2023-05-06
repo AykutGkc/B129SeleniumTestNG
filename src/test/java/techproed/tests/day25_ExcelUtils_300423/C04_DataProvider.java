@@ -57,7 +57,7 @@ public class C04_DataProvider {
         googlePage.aramaKutusu.sendKeys(araclar, Keys.ENTER);
 
         //Her aramadan sonra sayfa resmi aliniz.
-        ReusableMethods.fullScrennShot();
+        ReusableMethods.fullScrennShot("name");
         ReusableMethods.waitWithThreadSleep(2);
         Driver.closeDriver();
 

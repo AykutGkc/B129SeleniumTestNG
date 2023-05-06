@@ -29,7 +29,7 @@ public class NegativeTest {
                 Keys.TAB,ConfigReader.getProperty("fakepass"));
         blueRentalPage.login2.click();
         ReusableMethods.waitWithThreadSleep(3);
-        ReusableMethods.fullScrennShot();
+        ReusableMethods.fullScrennShot("fakeMail");
         Assert.assertTrue(blueRentalPage.hataMesaji.isDisplayed());
         Driver.closeDriver();
     }

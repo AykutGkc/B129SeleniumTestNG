@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="techproed.utilities.Listeners"/>
+    </listeners>
+    <test verbose="2" preserve-order="true"
+          name="/Users/aykutgkc/IdeaProjects/B129SeleniumTestNG/src/test/java/techproed/tests/day28_Listeners_040523/C02_ListenersTest2.java">
+        <classes>
+            <class name="techproed.tests.day28_Listeners_040523.C02_ListenersTest2">
+                <methods>
+                    <include name="test1"/>
+                    <include name="test2"/>
+                    <include name="test3"/>
+                    <include name="test4"/>
+                </methods>
+            </class>
+            <class name="techproed.tests.day24_PropertiesPages_290423.SmokeTest.NegativeTest"/>
+        </classes>
+    </test>
+</suite>
+
+<!-- Listener'i .xml file ile farkli method ve classlar icin kullanmak istersek 
+suite tag'indan sonra listener tag'i ile utilities altinda olusturdugumuz Listeners class'inin 
+yolunu belirtiriz.-->
